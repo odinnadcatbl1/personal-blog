@@ -1,4 +1,5 @@
 @import "vars";
+@import "./vendor/reset";
 
 html {
     font-size: 62.5%; /*10px от стандартного значения*/
@@ -12,3 +13,15 @@ body {
     font-size: 1.4rem; /*считается от html, поэтому это 10px*/
     color: $white;
 }
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+/* Blocks */
+@import "blocks/header";
+@import "blocks/sidebar";
+@import "blocks/main";
+@import "blocks/container";

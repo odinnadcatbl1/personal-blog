@@ -1,5 +1,14 @@
+@import "vars";
+
+html {
+    font-size: 62.5%; /*10px от стандартного значения*/
+}
+
 body {
-    background-color: black;
-    font-size: 21px;
-    color: white;
+    background-color: #181818;
+
+    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif;
+
+    font-size: 1.4rem; /*считается от html, поэтому это 10px*/
+    color: $white;
 }

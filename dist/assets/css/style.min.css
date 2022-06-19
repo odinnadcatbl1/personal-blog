@@ -1,1 +1,11 @@
-body{background-color:#000;font-size:21px;color:#fff}
+@charset "UTF-8";
+html {
+  font-size: 62.5%; /*10px от стандартного значения*/
+}
+
+body {
+  background-color: #181818;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif;
+  font-size: 1.4rem; /*считается от html, поэтому это 10px*/
+  color: #ffffff;
+}

@@ -602,6 +602,7 @@ body {
   position: relative;
   border-radius: 5px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
 }
 .stories__item:after {
   content: "";
@@ -614,8 +615,13 @@ body {
   z-index: 2;
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.6));
 }
+.stories__item:hover .stories__preview {
+  transform: scale(1.3);
+  transition-duration: 4s;
+}
 
 .stories__preview {
+  transform: scale(1.05); /*чтобы обрезать неудачные картинки*/
   display: block;
   width: 100%;
   height: 100%;
@@ -624,4 +630,26 @@ body {
   top: 0;
   left: 0;
   z-index: 1;
+  transition: transform 0.8s ease-out;
+}
+
+.stories__title,
+.stories__date {
+  font-size: 1.2rem;
+  line-height: 1.3;
+  color: .stories__title, .stories__date white;
+  position: absolute;
+  z-index: 3;
+  width: 100%;
+  padding: 1.4rem;
+  left: 0;
+}
+
+.stories__title {
+  top: 0;
+}
+
+.stories__date {
+  bottom: 0;
+  text-align: right;
 }

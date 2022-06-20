@@ -1,0 +1,52 @@
+.nav__list {
+    display: flex;
+}
+
+.nav__item {
+
+    position: relative;
+
+    &:hover {
+
+        .nav__link {
+            background-color: $blue;
+        }
+
+        > .subnav {
+            display: block;
+        }
+    }
+}
+
+.nav__link {
+    display: block;
+    padding: 1.35rem;
+    line-height: 1.1;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    color: $white;
+    text-decoration: none;
+    transition: background-color 0.2s linear;
+
+    &.has-subnav {
+        position: relative;
+        padding-right: 3.3rem;
+
+        &:after {
+            position: absolute;
+            top: 50%;
+            right: 1.35rem;
+            transform: translateY(-50%);
+            content: "";
+            display: block;
+            border-style: solid;
+            border-width: 6px 5px 0 5px;
+            border-color: $white transparent transparent transparent;
+        }
+    }
+}
+
+.header__right {
+    display: flex;
+    justify-content: flex-end;
+}

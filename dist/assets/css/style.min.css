@@ -597,6 +597,12 @@ a:hover {
 .btn--blue:hover {
   background-color: #272ca0;
 }
+.btn--rounded {
+  border-radius: 0.4em;
+}
+.btn--sm {
+  padding: 0.7em 1.25em;
+}
 
 .stories {
   display: grid;
@@ -949,4 +955,59 @@ a:hover {
 .related__list-date {
   font-size: 1.2rem;
   color: #828282;
+}
+
+.comments {
+  margin-top: 3rem;
+}
+
+.comments__title {
+  margin-bottom: 2rem;
+  font-size: 1.6rem;
+  color: #ffffff;
+  font-weight: 500;
+}
+
+.form__group {
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.form__control {
+  display: block;
+  padding: 0.5rem 0;
+  width: 100%;
+  background: none;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  font-family: inherit;
+  font-size: 1.4rem;
+  color: #ffffff;
+  border-bottom: 2px solid #3F3F3F;
+}
+.form__control::placeholder {
+  color: rgba(255, 255, 255, 0.2);
+}
+.form__control--textarea {
+  height: 30px;
+  resize: none;
+  overflow: hidden;
+}
+.form__control:focus + .form__line {
+  width: 100%;
+}
+.form__control:hover + .form__line {
+  width: 100%;
+}
+
+.form__line {
+  width: 0;
+  height: 1px;
+  background-color: #3137C9;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  transition: width 0.3s linear;
 }

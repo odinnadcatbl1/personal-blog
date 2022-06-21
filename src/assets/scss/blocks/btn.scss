@@ -32,4 +32,12 @@
             background-color: darken($color: $blue, $amount: 10%);
         }
     }
+
+    &--rounded {
+        border-radius: 0.4em;
+    }
+
+    &--sm {
+        padding: 0.7em 1.25em;
+    }
 }

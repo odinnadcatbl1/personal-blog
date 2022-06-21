@@ -716,3 +716,25 @@ body {
 .add-post__send:hover {
   background-color: #272ca0;
 }
+
+.post {
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.35);
+  background-color: #202020;
+  margin-bottom: 3rem;
+  padding: 2.5rem;
+  border-radius: 5px;
+}
+
+.post__content {
+  margin-bottom: 2rem;
+}
+
+.post__text {
+  font-size: 1.4rem;
+  color: #D2D2D2;
+}
+
+.post__data {
+  color: #828282;
+  line-height: 1.2;
+}

@@ -45,6 +45,14 @@
     }
 }
 
+.post__subtitle {
+    margin-bottom: 2rem;
+    margin-top: 3rem;
+    font-size: 1.6rem;
+    color: $white;
+    font-weight: 500;
+}
+
 .post__description {
     font-size: 1.4rem;
     color: #D2D2D2;
@@ -145,7 +153,12 @@
         color: inherit;
         opacity: 0.6;
         transition: opacity 0.2s ease;
-    }
+
+        &:hover {
+            text-decoration: none;
+            opacity: 1;
+        }
+    } 
 
 }
 

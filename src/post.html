@@ -57,7 +57,7 @@ title: Salavat | Post
 
 
         <div class="related">
-            <h3 class="related__title">
+            <h3 class="post__subtitle">
                 Интересно почитать
             </h3>
     
@@ -89,16 +89,58 @@ title: Salavat | Post
             </ul>
         </div> <!--/related-->
 
-        <div class="comments">
-            <h3 class="comments__title">Обсуждение</h3>
-            <form class="form" action="/" method="post">
-                <div class="form__group">
-                    <textarea class="form__control form__control--textarea" name="comment-text" placeholder="Введите текст для комментария"></textarea>
-                    <span class="form__line"></span>
+        <h3 class="post__subtitle">Обсуждение</h3>
+        <form class="form" action="/" method="post">
+            <div class="form__group">
+                <textarea class="form__control form__control--textarea" name="comment-text" placeholder="Введите текст для комментария"></textarea>
+                <span class="form__line"></span>
+            </div>
+            <button class="btn btn--blue btn--rounded btn--sm"type="submit">Отправить</button>
+        </form>
+        
+        <ul class="comments">    
+           <li class="comments__item">
+                <div class="comments__header">
+                    <img class="comments__avatar" src="https://via.placeholder.com/30" alt="avatar">
+                    <div class="comments__author">
+                        <div class="comments__name">
+                            Салават Фахрутдинов
+                        </div>
+                        <time datetime="2022-06-10 19:27" class="comments__pubdate">
+                            1 неделю назад
+                        </time>
+                    </div>
                 </div>
-                <button class="btn btn--blue btn--rounded btn--sm"type="submit">Отправить</button>
-            </form>
-        </div> <!--/comments-->
+
+                <div class="comments__text">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deleniti error neque voluptas molestias dolores maxime pariatur provident nam, amet vero aliquam eum ipsa, voluptatem voluptate optio? Rerum natus facere nisi?
+                </div>
+
+                <button class="comments__reply" type="button">Ответить</button>
+                <ul class="comments">    
+                    <li class="comments__item">
+                         <div class="comments__header">
+                             <img class="comments__avatar" src="https://via.placeholder.com/30" alt="avatar">
+                             <div class="comments__author">
+                                 <div class="comments__name">
+                                     Салават Фахрутдинов
+                                 </div>
+                                 <time datetime="2022-06-10 19:27" class="comments__pubdate">
+                                     1 неделю назад
+                                 </time>
+                             </div>
+                         </div>
+         
+                         <div class="comments__text">
+                             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deleniti error neque voluptas molestias dolores maxime pariatur provident nam, amet vero aliquam eum ipsa, voluptatem voluptate optio? Rerum natus facere nisi?
+                         </div>
+         
+                         <button class="comments__reply" type="button">Ответить</button>
+                    </li>
+                 </ul> <!--/comments-->
+            </li>
+
+        </ul> <!--/comments-->
     </div> <!--/post__content-->
 
 

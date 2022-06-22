@@ -377,6 +377,9 @@ a:hover {
   color: #ffffff;
   margin-bottom: 3rem;
 }
+.page__title--center {
+  text-align: center;
+}
 
 .header {
   display: flex;
@@ -1030,6 +1033,11 @@ a:hover {
   text-decoration: underline;
 }
 
+.form--auth {
+  max-width: 28rem;
+  margin: 0 auto;
+}
+
 .form__group {
   margin-bottom: 1.5rem;
   position: relative;
@@ -1075,6 +1083,23 @@ a:hover {
   left: 0;
   z-index: 1;
   transition: width 0.3s linear;
+}
+
+.form__footer--center {
+  text-align: center;
+}
+
+.form__footer-list {
+  font-size: 1.2rem;
+  line-height: 1.2;
+  display: flex;
+  justify-content: center;
+}
+.form__footer-list li {
+  margin: 0 0.5rem;
+}
+.form__footer-list a {
+  color: #ffffff;
 }
 
 .work {

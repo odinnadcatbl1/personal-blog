@@ -1,11 +1,15 @@
 .form__group {
     margin-bottom: 1.5rem;
     position: relative;
+
+    &--md {
+        margin-bottom: 2.5rem;
+    }
 }
 
 .form__control {
     display: block;
-    padding: 0.5rem 0;
+    padding: 0.5rem 0.75rem;
     width: 100%;
     background: none;
     border: none;

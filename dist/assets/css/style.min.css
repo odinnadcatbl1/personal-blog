@@ -1034,10 +1034,13 @@ a:hover {
   margin-bottom: 1.5rem;
   position: relative;
 }
+.form__group--md {
+  margin-bottom: 2.5rem;
+}
 
 .form__control {
   display: block;
-  padding: 0.5rem 0;
+  padding: 0.5rem 0.75rem;
   width: 100%;
   background: none;
   border: none;
@@ -1138,4 +1141,34 @@ a:hover {
   background-color: #EA8C1E;
   border-radius: 3px;
   padding: 0.4rem 0.9rem;
+}
+
+.cabinet {
+  display: flex;
+}
+
+.cabinet__form {
+  width: 34rem;
+}
+
+.cabinet__avatar {
+  flex-grow: 1;
+  padding-left: 11rem;
+}
+.cabinet__avatar img {
+  display: block;
+  margin-bottom: 1.5rem;
+}
+
+.cabinet__file {
+  font-size: 1.4rem;
+  color: #3137C9;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.cabinet__file input {
+  display: none;
+}
+.cabinet__file:hover {
+  text-decoration: none;
 }

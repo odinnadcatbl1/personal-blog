@@ -1,5 +1,9 @@
 .page {
+    display: flex;
+    flex-direction: column;
     overflow: hidden;
+    min-height: 100vh;
+    justify-content: center;
 }
 
 .page__title {

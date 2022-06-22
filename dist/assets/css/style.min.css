@@ -369,7 +369,11 @@ a:hover {
 
 /* Blocks */
 .page {
+  display: flex;
+  flex-direction: column;
   overflow: hidden;
+  min-height: 100vh;
+  justify-content: center;
 }
 
 .page__title {
@@ -935,6 +939,7 @@ a:hover {
 }
 .pagination__link:hover {
   background-color: #121212;
+  text-decoration: none;
 }
 .pagination__link.active {
   background-color: #3137C9;

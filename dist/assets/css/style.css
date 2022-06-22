@@ -390,13 +390,24 @@ a:hover {
 
 /* Blocks */
 .page {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
     overflow: hidden;
+    min-height: 100vh;
+    -ms-flex-pack: center;
+    justify-content: center;
 }
 
 .page__title {
     font-size: 2.1rem;
     color: #ffffff;
     margin-bottom: 3rem;
+}
+
+.page__title--center {
+    text-align: center;
 }
 
 .header {
@@ -1054,6 +1065,7 @@ a:hover {
 
 .pagination__link:hover {
     background-color: #121212;
+    text-decoration: none;
 }
 
 .pagination__link.active {
@@ -1160,14 +1172,23 @@ a:hover {
     text-decoration: underline;
 }
 
+.form--auth {
+    max-width: 28rem;
+    margin: 0 auto;
+}
+
 .form__group {
     margin-bottom: 1.5rem;
     position: relative;
 }
 
+.form__group--md {
+    margin-bottom: 2.5rem;
+}
+
 .form__control {
     display: block;
-    padding: 0.5rem 0;
+    padding: 0.5rem 0.75rem;
     width: 100%;
     background: none;
     border: none;
@@ -1222,6 +1243,27 @@ a:hover {
     left: 0;
     z-index: 1;
     transition: width 0.3s linear;
+}
+
+.form__footer--center {
+    text-align: center;
+}
+
+.form__footer-list {
+    font-size: 1.2rem;
+    line-height: 1.2;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.form__footer-list li {
+    margin: 0 0.5rem;
+}
+
+.form__footer-list a {
+    color: #ffffff;
 }
 
 .work {
@@ -1296,4 +1338,39 @@ a:hover {
     background-color: #EA8C1E;
     border-radius: 3px;
     padding: 0.4rem 0.9rem;
+}
+
+.cabinet {
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.cabinet__form {
+    width: 34rem;
+}
+
+.cabinet__avatar {
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    padding-left: 11rem;
+}
+
+.cabinet__avatar img {
+    display: block;
+    margin-bottom: 1.5rem;
+}
+
+.cabinet__file {
+    font-size: 1.4rem;
+    color: #3137C9;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.cabinet__file input {
+    display: none;
+}
+
+.cabinet__file:hover {
+    text-decoration: none;
 }

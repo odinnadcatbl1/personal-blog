@@ -12,7 +12,8 @@
 }
 
 .add-post__textarea {
-    width: 75%;
+    display: block;
+    flex-grow: 1;
     height: 26px;
     font-family: inherit;
     font-style: 1.5rem;
@@ -20,6 +21,7 @@
     border: none;
     background: transparent;
     resize: none;
+    overflow: hidden;
 
     &::placeholder {
         color: #D2D2D2;
@@ -27,7 +29,8 @@
 }
 
 .add-post__form-actions {
-    width: 25%;
+    width: 120px;
+    flex-shrink: 0;
     display: flex;
     justify-content: flex-end;
 }

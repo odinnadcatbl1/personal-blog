@@ -1,4 +1,5 @@
 .burger {
+    display: none;
     width: 3rem;
     height: 2rem;
     position: absolute;
@@ -40,7 +41,7 @@
         transition: opacity 0.2s linear;
     }
 
-    &.active {
+    .show-sidebar & {
         span {
             opacity: 0;
         }
@@ -56,5 +57,7 @@
         }
     }
 
-    
+    @include breakpoint($tablet-bp) {
+        display: block;
+    }
 }

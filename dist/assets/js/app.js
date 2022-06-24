@@ -9,6 +9,16 @@
 /******/ (function() { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./src/assets/js/mobile-nav.js":
+/*!*************************************!*\
+  !*** ./src/assets/js/mobile-nav.js ***!
+  \*************************************/
+/***/ (function() {
+
+eval("const burger = document.getElementById('sidebarToggle');\r\nconst sidebar = document.getElementById('sidebar');\r\nconst page = document.querySelector('.page');\r\nconst body = document.body;\r\n\r\nburger.addEventListener('click', e => {\r\n    if (body.classList.contains('show-sidebar')) {\r\n        closeSidebar();\r\n    } else {\r\n        showSidebar();\r\n    }\r\n});\r\n\r\nfunction showSidebar() {\r\n    let mask = document.createElement('div');\r\n    mask.classList.add('page__mask');\r\n    mask.addEventListener('click', closeSidebar); \r\n    page.appendChild(mask);\r\n    body.classList.add('show-sidebar');\r\n}\r\n\r\nfunction closeSidebar() {\r\n    body.classList.remove('show-sidebar');\r\n    document.querySelector('.page__mask').remove();\r\n}\r\n\n\n//# sourceURL=webpack://brainscloud/./src/assets/js/mobile-nav.js?");
+
+/***/ }),
+
 /***/ "./src/assets/js/modal.js":
 /*!********************************!*\
   !*** ./src/assets/js/modal.js ***!
@@ -25,6 +35,7 @@ eval("const modalBtn = document.querySelectorAll('[data-modal]');\r\nconst modal
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module can't be inlined because the eval devtool is used.
+/******/ 	__webpack_modules__["./src/assets/js/mobile-nav.js"]();
 /******/ 	var __webpack_exports__ = {};
 /******/ 	__webpack_modules__["./src/assets/js/modal.js"]();
 /******/ 	

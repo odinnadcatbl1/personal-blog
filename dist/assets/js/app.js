@@ -27,6 +27,16 @@ eval("const burger = document.getElementById('sidebarToggle');\r\nconst sidebar 
 
 eval("const modalBtn = document.querySelectorAll('[data-modal]');\r\nconst modal = document.querySelectorAll('.modal');\r\nconst body = document.body;\r\nconst modalClose = document.querySelectorAll('.modal__close');\r\n\r\nconst closeModal = (modal) => {\r\n    let modalContent = modal.querySelector('.modal__content');\r\n    modalContent.removeAttribute('style');\r\n\r\n    setTimeout(()=>{\r\n        modal.classList.remove('show');\r\n        body.classList.remove('no-scroll');\r\n    }, 200)\r\n};\r\n\r\nmodalBtn.forEach(item => {\r\n    item.addEventListener('click', e => {\r\n        let event = e.currentTarget;\r\n        let modalId = event.getAttribute('data-modal');\r\n        let modal = document.getElementById(modalId);\r\n        let modalContent = modal.querySelector('.modal__content');\r\n        \r\n        modalContent.addEventListener('click', e => {\r\n            e.stopPropagation();\r\n        })\r\n\r\n        modal.classList.add('show');\r\n        body.classList.add('no-scroll');\r\n        \r\n        setTimeout(()=>{\r\n            modalContent.style.transform = 'none';\r\n            modalContent.style.opacity = '1';\r\n        }, 0.5)\r\n    });\r\n});\r\n\r\nmodalClose.forEach(item => {\r\n    item.addEventListener('click', e => {\r\n        let currentModal = e.currentTarget.parentNode.parentNode;\r\n        closeModal(currentModal);\r\n    });\r\n});\r\n\r\nmodal.forEach(item => {\r\n    item.addEventListener('click', e => {\r\n        let currentModal = e.currentTarget;\r\n        closeModal(currentModal);\r\n    });\r\n});\n\n//# sourceURL=webpack://brainscloud/./src/assets/js/modal.js?");
 
+/***/ }),
+
+/***/ "./src/assets/js/textarea.js":
+/*!***********************************!*\
+  !*** ./src/assets/js/textarea.js ***!
+  \***********************************/
+/***/ (function() {
+
+eval("const textArea = document.querySelectorAll('[data-autoresize]');\r\n\r\ntextArea.forEach(item => {\r\n    let textAreaHeight = item.offsetHeight;\r\n    item.addEventListener('input', e => {\r\n        let elem = e.currentTarget;\r\n\r\n        elem.style.height = textAreaHeight;\r\n        elem.style.height = elem.scrollHeight + 'px';\r\n    });\r\n});\n\n//# sourceURL=webpack://brainscloud/./src/assets/js/textarea.js?");
+
 /***/ })
 
 /******/ 	});
@@ -36,8 +46,9 @@ eval("const modalBtn = document.querySelectorAll('[data-modal]');\r\nconst modal
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module can't be inlined because the eval devtool is used.
 /******/ 	__webpack_modules__["./src/assets/js/mobile-nav.js"]();
-/******/ 	var __webpack_exports__ = {};
 /******/ 	__webpack_modules__["./src/assets/js/modal.js"]();
+/******/ 	var __webpack_exports__ = {};
+/******/ 	__webpack_modules__["./src/assets/js/textarea.js"]();
 /******/ 	
 /******/ })()
 ;

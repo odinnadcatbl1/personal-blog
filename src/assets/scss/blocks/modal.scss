@@ -30,6 +30,10 @@
         padding: 0;
         background: none;
     }
+
+    @include breakpoint($tablet-bp) {
+        padding: 5rem 3rem;
+    }
 }
 
 .modal__close {

@@ -353,8 +353,13 @@ body {
   color: #ffffff;
   line-height: 1.5;
 }
-body.no-scroll, body.show-sidebar {
+body.no-scroll {
   overflow: hidden;
+}
+@media screen and (max-width: 991px) {
+  body.show-sidebar {
+    overflow: hidden;
+  }
 }
 
 *,
@@ -942,7 +947,7 @@ a:hover {
 
 .add-post__form {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
 }
 
 .add-post__textarea {
@@ -1381,7 +1386,7 @@ a:hover {
   color: rgba(255, 255, 255, 0.2);
 }
 .form__control--textarea {
-  height: 30px;
+  height: 34px;
   resize: none;
   overflow: hidden;
 }
@@ -1596,6 +1601,11 @@ a:hover {
 .modal__content--story {
   padding: 0;
   background: none;
+}
+@media screen and (max-width: 991px) {
+  .modal__content {
+    padding: 5rem 3rem;
+  }
 }
 
 .modal__close {

@@ -1,5 +1,4 @@
 .modal {
-    //display: flex;
     display: none;
     flex-direction: column;
     justify-content: center;
@@ -11,6 +10,10 @@
     left: 0;
     z-index: $z-index-modal;
     background-color: rgba(0,0,0, 0.8);
+
+    &.show {
+        display: flex;
+    }
 }
 
 .modal__content {
@@ -20,6 +23,13 @@
     padding: 8rem;
     background-color: $primary;
     border-radius: 15px;
+    transform: translateY(-50px);
+    transition: transform 0.2s ease-in, opacity 200ms ease-in-out;
+
+    &--story {
+        padding: 0;
+        background: none;
+    }
 }
 
 .modal__close {
@@ -60,3 +70,7 @@
     }
 }
 
+.modal__video {
+    display: block;
+    margin: 0 auto;
+}

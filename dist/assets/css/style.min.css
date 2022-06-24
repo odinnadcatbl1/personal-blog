@@ -1577,6 +1577,9 @@ a:hover {
   z-index: 1010;
   background-color: rgba(0, 0, 0, 0.8);
 }
+.modal.show {
+  display: flex;
+}
 
 .modal__content {
   position: relative;
@@ -1585,6 +1588,12 @@ a:hover {
   padding: 8rem;
   background-color: #202020;
   border-radius: 15px;
+  transform: translateY(-50px);
+  transition: transform 0.2s ease-in, opacity 200ms ease-in-out;
+}
+.modal__content--story {
+  padding: 0;
+  background: none;
 }
 
 .modal__close {
@@ -1618,4 +1627,9 @@ a:hover {
 }
 .modal__footer a:hover {
   text-decoration: none;
+}
+
+.modal__video {
+  display: block;
+  margin: 0 auto;
 }

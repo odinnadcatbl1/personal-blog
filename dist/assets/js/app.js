@@ -1,1 +1,32 @@
-console.log("file 1"),console.log("file 2");
+/*
+ * ATTENTION: The "eval" devtool has been used (maybe by default in mode: "development").
+ * This devtool is neither made for production nor for readable output files.
+ * It uses "eval()" calls to create a separate source file in the browser devtools.
+ * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
+ * or disable the default devtool with "devtool: false".
+ * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
+ */
+/******/ (function() { // webpackBootstrap
+/******/ 	var __webpack_modules__ = ({
+
+/***/ "./src/assets/js/modal.js":
+/*!********************************!*\
+  !*** ./src/assets/js/modal.js ***!
+  \********************************/
+/***/ (function() {
+
+eval("const modalBtn = document.querySelectorAll('[data-modal]');\r\nconst modal = document.querySelectorAll('.modal');\r\nconst body = document.body;\r\nconst modalClose = document.querySelectorAll('.modal__close');\r\n\r\nconst closeModal = (modal) => {\r\n    let modalContent = modal.querySelector('.modal__content');\r\n    modalContent.removeAttribute('style');\r\n\r\n    setTimeout(()=>{\r\n        modal.classList.remove('show');\r\n        body.classList.remove('no-scroll');\r\n    }, 200)\r\n};\r\n\r\nmodalBtn.forEach(item => {\r\n    item.addEventListener('click', e => {\r\n        let event = e.currentTarget;\r\n        let modalId = event.getAttribute('data-modal');\r\n        let modal = document.getElementById(modalId);\r\n        let modalContent = modal.querySelector('.modal__content');\r\n        \r\n        modalContent.addEventListener('click', e => {\r\n            e.stopPropagation();\r\n        })\r\n\r\n        modal.classList.add('show');\r\n        body.classList.add('no-scroll');\r\n        \r\n        setTimeout(()=>{\r\n            modalContent.style.transform = 'none';\r\n            modalContent.style.opacity = '1';\r\n        }, 0.5)\r\n    });\r\n});\r\n\r\nmodalClose.forEach(item => {\r\n    item.addEventListener('click', e => {\r\n        let currentModal = e.currentTarget.parentNode.parentNode;\r\n        closeModal(currentModal);\r\n    });\r\n});\r\n\r\nmodal.forEach(item => {\r\n    item.addEventListener('click', e => {\r\n        let currentModal = e.currentTarget;\r\n        closeModal(currentModal);\r\n    });\r\n});\n\n//# sourceURL=webpack://brainscloud/./src/assets/js/modal.js?");
+
+/***/ })
+
+/******/ 	});
+/************************************************************************/
+/******/ 	
+/******/ 	// startup
+/******/ 	// Load entry module and return exports
+/******/ 	// This entry module can't be inlined because the eval devtool is used.
+/******/ 	var __webpack_exports__ = {};
+/******/ 	__webpack_modules__["./src/assets/js/modal.js"]();
+/******/ 	
+/******/ })()
+;

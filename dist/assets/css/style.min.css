@@ -704,7 +704,9 @@ a:hover {
 }
 @media screen and (max-width: 991px) {
   .main {
+    padding-top: 7rem;
     padding-left: 0;
+    padding-bottom: 5rem;
   }
 }
 
@@ -714,7 +716,7 @@ a:hover {
   padding-left: 5rem;
   padding-right: 5rem;
 }
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 575px) {
   .container {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
@@ -859,6 +861,12 @@ a:hover {
   grid-template-rows: 195px;
   margin-bottom: 3rem;
 }
+@media screen and (max-width: 991px) {
+  .stories {
+    grid-template-columns: repeat(4, 140px);
+    overflow: auto;
+  }
+}
 
 .stories__item {
   overflow: hidden;
@@ -924,6 +932,11 @@ a:hover {
   border-radius: 5px;
   padding: 1.5rem 2rem;
 }
+@media screen and (max-width: 991px) {
+  .add-post {
+    padding: 1.5rem;
+  }
+}
 
 .add-post__form {
   display: flex;
@@ -935,7 +948,7 @@ a:hover {
   flex-grow: 1;
   height: 26px;
   font-family: inherit;
-  font-style: 1.5rem;
+  font-size: 1.5rem;
   color: #ffffff;
   border: none;
   background: transparent;
@@ -947,10 +960,15 @@ a:hover {
 }
 
 .add-post__form-actions {
-  width: 120px;
+  width: 12rem;
   flex-shrink: 0;
   display: flex;
   justify-content: flex-end;
+}
+@media screen and (max-width: 991px) {
+  .add-post__form-actions {
+    width: 9rem;
+  }
 }
 
 .add-post__file,
@@ -963,6 +981,13 @@ a:hover {
   border: none;
   transition: background-color 0.2s ease;
 }
+@media screen and (max-width: 991px) {
+  .add-post__file,
+.add-post__send {
+    width: 3.4rem;
+    height: 3.4rem;
+  }
+}
 
 .add-post__file {
   background: #EBEBEB url("../images/add-photo.svg") center no-repeat;
@@ -973,13 +998,25 @@ a:hover {
 .add-post__file:hover {
   background-color: #d2d2d2;
 }
+@media screen and (max-width: 991px) {
+  .add-post__file {
+    background-size: 18px;
+  }
+}
 
 .add-post__send {
   margin-left: 1.5rem;
-  background-color: #3137C9;
+  font-size: 0;
+  color: transparent;
+  background: #3137C9 url("../images/send.svg") center no-repeat;
 }
 .add-post__send:hover {
   background-color: #272ca0;
+}
+@media screen and (max-width: 991px) {
+  .add-post__send {
+    background-size: 15px;
+  }
 }
 
 .post {
@@ -989,6 +1026,11 @@ a:hover {
   padding: 2.5rem;
   border-radius: 5px;
   overflow: hidden;
+}
+@media screen and (max-width: 575px) {
+  .post {
+    padding: 1.5rem;
+  }
 }
 
 .post__header {
@@ -1013,6 +1055,7 @@ a:hover {
   color: #ffffff;
   font-weight: 500;
   margin-bottom: 1.5rem;
+  line-height: 1.4;
 }
 .post__title a {
   color: inherit;
@@ -1021,8 +1064,8 @@ a:hover {
 .post__title a:hover {
   text-decoration: underline;
 }
-.post__title--mb0 {
-  margin-bottom: 0;
+.post__title--open {
+  margin-bottom: 0.75rem;
 }
 
 .post__subtitle {
@@ -1081,6 +1124,12 @@ a:hover {
   justify-content: space-between;
   align-items: center;
 }
+@media screen and (max-width: 991px) {
+  .post__footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
 
 .post__data {
   display: flex;
@@ -1089,6 +1138,12 @@ a:hover {
 }
 .post__data a {
   color: inherit;
+}
+@media screen and (max-width: 991px) {
+  .post__data {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+  }
 }
 
 .post__data-item:not(:last-child):after {
@@ -1153,6 +1208,11 @@ a:hover {
   justify-content: center;
   margin-top: 8rem;
 }
+@media screen and (max-width: 991px) {
+  .pagination {
+    margin-top: 5rem;
+  }
+}
 
 .pagination__item {
   margin: 0 0.5rem;
@@ -1190,10 +1250,21 @@ a:hover {
   display: flex;
   flex-wrap: wrap;
 }
+@media screen and (max-width: 575px) {
+  .related__list {
+    flex-direction: column;
+  }
+}
 
 .related__list-item {
   width: 50%;
   margin-bottom: 2.5rem;
+}
+@media screen and (max-width: 575px) {
+  .related__list-item {
+    width: 100%;
+    margin-bottom: 1.5rem;
+  }
 }
 
 .related__list-title {
@@ -1223,6 +1294,11 @@ a:hover {
 .comments__item > .comments {
   padding-left: 3rem;
   margin-top: 3rem;
+}
+@media screen and (max-width: 575px) {
+  .comments__item > .comments {
+    padding-left: 1.5rem;
+  }
 }
 
 .comments__header {
@@ -1411,9 +1487,19 @@ a:hover {
 .cabinet {
   display: flex;
 }
+@media screen and (max-width: 575px) {
+  .cabinet {
+    flex-direction: column;
+  }
+}
 
 .cabinet__form {
   width: 34rem;
+}
+@media screen and (max-width: 575px) {
+  .cabinet__form {
+    order: 2;
+  }
 }
 
 .cabinet__avatar {
@@ -1423,6 +1509,13 @@ a:hover {
 .cabinet__avatar img {
   display: block;
   margin-bottom: 1.5rem;
+}
+@media screen and (max-width: 575px) {
+  .cabinet__avatar {
+    order: 1;
+    padding-left: 0;
+    margin-bottom: 2rem;
+  }
 }
 
 .cabinet__file {

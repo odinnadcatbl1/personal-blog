@@ -4,6 +4,12 @@
     grid-column-gap: 14px;
     grid-template-rows: 195px;
     margin-bottom: 3rem;
+
+    
+    @include breakpoint($tablet-bp) {
+        grid-template-columns: repeat(4, 140px);
+        overflow: auto;
+    }
 }
 
 .stories__item {

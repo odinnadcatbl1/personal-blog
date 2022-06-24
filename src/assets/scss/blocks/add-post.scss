@@ -4,6 +4,10 @@
     background-color: $secondary;
     border-radius: 5px;
     padding: 1.5rem 2rem;
+
+    @include breakpoint($tablet-bp) {
+        padding: 1.5rem;
+    }
 }
 
 .add-post__form {
@@ -16,7 +20,7 @@
     flex-grow: 1;
     height: 26px;
     font-family: inherit;
-    font-style: 1.5rem;
+    font-size: 1.5rem;
     color: $white;
     border: none;
     background: transparent;
@@ -29,10 +33,14 @@
 }
 
 .add-post__form-actions {
-    width: 120px;
+    width: 12rem;
     flex-shrink: 0;
     display: flex;
     justify-content: flex-end;
+
+    @include breakpoint($tablet-bp) {
+        width: 9rem;
+    }
 }
 
 .add-post__file,
@@ -44,6 +52,11 @@
     cursor: pointer;
     border: none;
     transition: background-color 0.2s ease;
+
+    @include breakpoint($tablet-bp) {
+        width: 3.4rem;
+        height: 3.4rem;
+    }
 }
 
 .add-post__file {
@@ -56,13 +69,23 @@
     &:hover {
         background-color: darken(#EBEBEB, 10%);
     }
+
+    @include breakpoint($tablet-bp) {
+        background-size: 18px;
+    }
 }
 
 .add-post__send {
     margin-left: 1.5rem;
-    background-color: $blue;
+    font-size: 0;
+    color: transparent;
+    background: $blue url("../images/send.svg") center no-repeat;
     &:hover {
         background-color: darken($blue, 10%);
+    }
+
+    @include breakpoint($tablet-bp) {
+        background-size: 15px;
     }
 }
 
